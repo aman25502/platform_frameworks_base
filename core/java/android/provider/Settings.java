@@ -5279,6 +5279,8 @@ public final class Settings {
         /** @hide */
         private static final Validator QS_PANEL_BG_USE_NEW_TINT_VALIDATOR = BOOLEAN_VALIDATOR;
 
+        public static final String SMART_CHARGING_RESET_STATS = "smart_charging_reset_stats";
+
         /**
          * @hide
          */
