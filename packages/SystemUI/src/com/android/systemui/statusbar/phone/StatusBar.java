@@ -4162,6 +4162,12 @@ public class StatusBar extends SystemUI implements DemoMode,
 	    resolver.registerContentObserver(Settings.System.getUriFor(
 		    Settings.System.QS_PANEL_BG_USE_NEW_TINT),
 		    false, this, UserHandle.USER_ALL);
+ 	    resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.OMNI_QS_LAYOUT_ROWS),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.QS_LAYOUT_ROWS_LANDSCAPE),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
