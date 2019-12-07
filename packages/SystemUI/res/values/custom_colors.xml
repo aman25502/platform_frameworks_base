@@ -23,5 +23,5 @@
     <color name="screenshot_partial_capture_background">@*android:color/accent_device_default_light</color> 
     <color name="screenshot_partial_cancel_background">#a0000000</color>
     <color name="quick_settings_status_bar_background_color">#ff000000</color>
-
+    <color name="accent_device_default_light">@*android:color/accent_device_default_light</color>
 </resources>
