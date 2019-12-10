@@ -13,4 +13,9 @@
     </string>
 
     <integer name="hardware_ui_align">53</integer>
+
+    <string name="config_cpuTempSensor" translatable="false"></string>
+
+    <!-- The CPU temperature divider, if needed -->
+    <integer name="config_cpuTempDivider" translatable="false">1</integer>
 </resources>

@@ -44,10 +44,6 @@ class ThemeOverlayManager {
     static final String SETTINGS_PACKAGE = "com.android.settings";
     @VisibleForTesting
     static final String SYSUI_PACKAGE = "com.android.systemui";
-    @VisibleForTesting
-    static final String WELLBEING_PACKAGE = "com.google.android.apps.wellbeing";
-    @VisibleForTesting
-    static final String GMS_PACKAGE = "com.google.android.gms";
 
     @VisibleForTesting
     static final String OVERLAY_CATEGORY_PRIMARY = "android.theme.customization.primary_color";
@@ -72,13 +68,7 @@ class ThemeOverlayManager {
             "android.theme.customization.icon_pack.launcher";
     @VisibleForTesting
     static final String OVERLAY_CATEGORY_ICON_THEME_PICKER =
-            "android.theme.customization.icon_pack.themepicker";            
-    @VisibleForTesting
-    static final String OVERLAY_CATEGORY_ICON_WELLBEING =
-            "android.theme.customization.icon_pack.wellbeing";
-    @VisibleForTesting
-    static final String OVERLAY_CATEGORY_ICON_GMS =
-            "android.theme.customization.icon_pack.gms";
+            "android.theme.customization.icon_pack.themepicker";
 
     /*
      * All theme customization categories used by the system, in order that they should be applied,
@@ -93,9 +83,7 @@ class ThemeOverlayManager {
             OVERLAY_CATEGORY_ICON_ANDROID,
             OVERLAY_CATEGORY_ICON_SYSUI,
             OVERLAY_CATEGORY_ICON_SETTINGS,
-            OVERLAY_CATEGORY_ICON_THEME_PICKER,
-            OVERLAY_CATEGORY_ICON_WELLBEING,
-            OVERLAY_CATEGORY_ICON_GMS);
+            OVERLAY_CATEGORY_ICON_THEME_PICKER);
 
     /* Categories that need to applied to the current user as well as the system user. */
     @VisibleForTesting
@@ -133,10 +121,6 @@ class ThemeOverlayManager {
                 Sets.newHashSet(OVERLAY_CATEGORY_ICON_LAUNCHER));
         mTargetPackageToCategories.put(mThemePickerPackage,
                 Sets.newHashSet(OVERLAY_CATEGORY_ICON_THEME_PICKER));
-        mTargetPackageToCategories.put(WELLBEING_PACKAGE,
-                Sets.newHashSet(OVERLAY_CATEGORY_ICON_WELLBEING));
-        mTargetPackageToCategories.put(GMS_PACKAGE,
-                Sets.newHashSet(OVERLAY_CATEGORY_ICON_GMS));                
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_COLOR, ANDROID_PACKAGE);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_PRIMARY, ANDROID_PACKAGE);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_FONT, ANDROID_PACKAGE);
@@ -144,8 +128,6 @@ class ThemeOverlayManager {
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_ANDROID, ANDROID_PACKAGE);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_SYSUI, SYSUI_PACKAGE);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_SETTINGS, SETTINGS_PACKAGE);
-        mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_WELLBEING, WELLBEING_PACKAGE);
-        mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_GMS, GMS_PACKAGE);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_LAUNCHER, mLauncherPackage);
         mCategoryToTargetPackage.put(OVERLAY_CATEGORY_ICON_THEME_PICKER, mThemePickerPackage);
     }
