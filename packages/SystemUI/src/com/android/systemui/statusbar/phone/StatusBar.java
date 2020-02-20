@@ -4159,6 +4159,9 @@ public class StatusBar extends SystemUI implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_BLUR_INTENSITY),
                     false, this, UserHandle.USER_ALL);
+	    resolver.registerContentObserver(Settings.System.getUriFor(
+		    Settings.System.QS_PANEL_BG_USE_NEW_TINT),
+		    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -4171,6 +4174,8 @@ public class StatusBar extends SystemUI implements DemoMode,
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_BLUR_ALPHA)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_BLUR_INTENSITY))) {
                 updateBlurVisibility();
+	    } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_NEW_TINT))) {
+		    mQSPanel.getHost().reloadAllTiles();
 	    }
 	    update();
         }
@@ -5072,7 +5077,6 @@ public class StatusBar extends SystemUI implements DemoMode,
     public NotificationGutsManager getGutsManager() {
         return mGutsManager;
     }
-
     @Subcomponent
     public interface StatusBarInjector {
         void createStatusBar(StatusBar statusbar);
