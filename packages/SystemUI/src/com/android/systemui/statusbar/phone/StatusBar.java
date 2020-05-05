@@ -4187,7 +4187,6 @@ public class StatusBar extends SystemUI implements DemoMode,
             setGamingMode();
             updateCorners();
 	    updateKeyguardStatusSettings();
-	    updateQSPanel();
         }
     }
 
