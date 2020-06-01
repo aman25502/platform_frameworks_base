@@ -240,7 +240,7 @@ public class QSContainerImpl extends FrameLayout implements
 
     private void setQsBackground() {
         if (mSetQsFromResources) {
-            if (mQsBgNewEnabled) {
+            if (!mQsBgNewEnabled) {
                 mQsBackGround = getContext().getDrawable(R.drawable.qs_background_primary);
             } else {
                 mQsBackGroundNew = getContext().getDrawable(R.drawable.qs_background_primary_new);
@@ -252,7 +252,7 @@ public class QSContainerImpl extends FrameLayout implements
                 Log.w("QSContainerImpl", "Can't change qs theme", e);
             }
         } else {
-            if (mQsBgNewEnabled) {
+            if (!mQsBgNewEnabled) {
                 mQsBackGround.setColorFilter(mCurrentColor, PorterDuff.Mode.SRC_ATOP);
             } else {
                 mQsBackGroundNew.setColorFilter(mCurrentColor, PorterDuff.Mode.SRC_ATOP);
@@ -264,7 +264,7 @@ public class QSContainerImpl extends FrameLayout implements
                 Log.w("QSContainerImpl", "Can't change qs theme", e);
             }
         }
-        if (mQsBgNewEnabled) {
+        if (!mQsBgNewEnabled) {
             mQsBackGround.setAlpha(mQsBackGroundAlpha);
         } else {
             mQsBackGroundNew.setAlpha(mQsBackGroundAlpha);
